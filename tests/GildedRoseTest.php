@@ -140,12 +140,12 @@ class GildedRoseTest extends TestCase
     /** @test */
     function updates_sulfuras_items_on_the_sell_date()
     {
-        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 5);
+        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 0);
 
         $item->tick();
 
         $this->assertEquals(10, $item->quality);
-        $this->assertEquals(5, $item->sellIn);
+        $this->assertEquals(0, $item->sellIn);
     }
 
     /** @test */
